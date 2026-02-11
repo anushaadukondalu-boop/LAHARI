@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Educational Video Learning Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+        }
+
+        header {
+            background-color: #1e3c72;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .buttons {
+            margin: 30px 0;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 8px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2a5298;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16335c;
+        }
+
+        .videos {
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        iframe {
+            width: 90%;
+            height: 400px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Educational Video Learning Portal</h1>
+    <p>Distraction-Free YouTube Learning</p>
+</header>
+
+<div class="buttons">
+    <button onclick="show('solar')">Solar Energy</button>
+    <button onclick="show('ai')">AI Basics</button>
+</div>
+
+<!-- Solar Videos -->
+<div id="solar" class="videos">
+    <h2>Solar Energy</h2>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" allowfullscreen></iframe>
+</div>
+
+<!-- AI Videos -->
+<div id="ai" class="videos">
+    <h2>AI Basics</h2>
+    <iframe src="https://www.youtube.com/embed/3tmd-ClpJxA?rel=0" allowfullscreen></iframe>
+</div>
+
+<footer>
+    © 2026 Educational Learning Portal
+</footer>
+
+<script>
+    function show(id) {
+        var sections = document.getElementsByClassName("videos");
+
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = "none";
+        }
+
+        document.getElementById(id).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
