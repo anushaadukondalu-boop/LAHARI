@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educational Video Learning Portal</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.subject-buttons {
+    margin: 30px 0;
+}
+
+.subject-buttons button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a5298;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subject-buttons button:hover {
+    background-color: #1e3c72;
+}
+
+.video-section {
+    display: none;
+    margin: 20px;
+}
+
+iframe {
+    width: 90%;
+    height: 400px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #1e3c72;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+</style>
+
+<script>
+function showVideos(subject) {
+    let sections = document.querySelectorAll(".video-section");
+    sections.forEach(section => section.style.display = "none");
+
+    document.getElementById(subject).style.display = "block";
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <h1>Educational Video Learning Portal</h1>
+    <p>Distraction-Free YouTube Learning Platform</p>
+</header>
+
+<div class="subject-buttons">
+    <button onclick="showVideos('solar')">Solar Energy</button>
+    <button onclick="showVideos('geo')">Geophysics</button>
+    <button onclick="showVideos('ai')">AI Basics</button>
+    <button onclick="showVideos('entre')">Entrepreneurship</button>
+</div>
+
+<!-- Solar Energy Videos -->
+<div id="solar" class="video-section">
+    <h2>Solar Energy</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID1?rel=0&modestbranding=1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID2?rel=0&modestbranding=1" allowfullscreen></iframe>
+</div>
+
+<!-- Geophysics Videos -->
+<div id="geo" class="video-section">
+    <h2>Geophysics</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID3?rel=0&modestbranding=1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID4?rel=0&modestbranding=1" allowfullscreen></iframe>
+</div>
+
+<!-- AI Basics Videos -->
+<div id="ai" class="video-section">
+    <h2>AI Basics</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID5?rel=0&modestbranding=1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID6?rel=0&modestbranding=1" allowfullscreen></iframe>
+</div>
+
+<!-- Entrepreneurship Videos -->
+<div id="entre" class="video-section">
+    <h2>Entrepreneurship</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID7?rel=0&modestbranding=1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID8?rel=0&modestbranding=1" allowfullscreen></iframe>
+</div>
+
+<footer>
+    © 2026 Educational Learning Portal | Videos Powered by YouTube
+</footer>
+
+</body>
+</html>
